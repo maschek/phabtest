@@ -17,6 +17,9 @@ class Sample
     protected $responseInfo;
 
 
+/*
+comment
+*/
     public function flush()
     {
         $this->requestBody       = null;
