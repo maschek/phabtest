@@ -16,6 +16,17 @@ class Sample
     protected $responseBody;
     protected $responseInfo;
 
+
+    public function flush()
+    {
+        $this->requestBody       = null;
+        $this->requestLength     = 0;
+        $this->verb              = 'GET';
+        $this->responseBody      = null;
+        $this->responseInfo      = null;
+    }
+
+
     public function openConnect($url = null, $verb = 'GET', $requestBody = null, $filename = null)
     {
         $this->url               = $url;
@@ -30,15 +41,6 @@ class Sample
 
         if ($this->requestBody !== null || $this->filename !== null)
             $this->buildPostBody();
-    }
-
-    public function flush()
-    {
-        $this->requestBody       = null;
-        $this->requestLength     = 0;
-        $this->verb              = 'GET';
-        $this->responseBody      = null;
-        $this->responseInfo      = null;
     }
 
     public function execute()
