@@ -19,6 +19,7 @@ class Sample
 
 /*
 comment
+second line
 */
     public function flush()
     {
