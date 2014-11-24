@@ -17,18 +17,6 @@ class Sample
     protected $responseInfo;
 
 
-/*
-comment
-second line
-*/
-    public function flush()
-    {
-        $this->requestBody       = null;
-        $this->requestLength     = 0;
-        $this->verb              = 'GET';
-        $this->responseBody      = null;
-        $this->responseInfo      = null;
-    }
 
 
     public function openConnect($url = null, $verb = 'GET', $requestBody = null, $filename = null)
@@ -46,6 +34,20 @@ second line
         if ($this->requestBody !== null || $this->filename !== null)
             $this->buildPostBody();
     }
+
+/*
+comment
+second line
+*/
+    public function flush()
+    {
+        $this->requestBody       = null;
+        $this->requestLength     = 0;
+        $this->verb              = 'GET';
+        $this->responseBody      = null;
+        $this->responseInfo      = null;
+    }
+
 
     public function execute()
     {
