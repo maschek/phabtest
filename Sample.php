@@ -8,9 +8,10 @@ class Sample
     public $username;
     public $password;
 
-	/* comment 1*/
+    /*
+    * Url of the thingy
+    */
     protected $url;
-/* comment 2*/
     protected $verb;
     protected $requestBody;
     protected $requestLength;
