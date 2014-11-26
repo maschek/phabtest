@@ -22,21 +22,6 @@ class Sample
 
 
 
-    public function openConnect($url = null, $verb = 'GET', $requestBody = null, $filename = null)
-    {
-        $this->url               = $url;
-        $this->verb              = $verb;
-        $this->requestBody       = $requestBody;
-        $this->requestLength     = 0;
-        $this->acceptType        = 'application/json';
-        $this->responseBody      = null;
-        $this->responseInfo      = null;
-        $this->filename          = $filename;
-        $this->contentType       = 'Content-Type: application/json';
-
-        if ($this->requestBody !== null || $this->filename !== null)
-            $this->buildPostBody();
-    }
 
 
 /*
@@ -85,6 +70,23 @@ second line
             throw $e;
         }
     }
+
+    public function openConnect($url = null, $verb = 'GET', $requestBody = null, $filename = null)
+    {
+        $this->url               = $url;
+        $this->verb              = $verb;
+        $this->requestBody       = $requestBody;
+        $this->requestLength     = 0;
+        $this->acceptType        = 'application/json';
+        $this->responseBody      = null;
+        $this->responseInfo      = null;
+        $this->filename          = $filename;
+        $this->contentType       = 'Content-Type: application/json';
+
+        if ($this->requestBody !== null || $this->filename !== null)
+            $this->buildPostBody();
+    }
+
 
     public function buildPostBody($data = null)
     {
