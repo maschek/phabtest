@@ -21,6 +21,7 @@ class Sample
 
 /*
 comment
+sdsd
 second line
 */
     public function flush()
