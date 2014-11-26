@@ -19,7 +19,18 @@ class Sample
     protected $responseInfo;
 
 
-
+/*
+comment
+second line
+*/
+    public function flush()
+    {
+        $this->requestBody       = null;
+        $this->requestLength     = 0;
+        $this->verb              = 'GET';
+        $this->responseBody      = null;
+        $this->responseInfo      = null;
+    }
 
     public function openConnect($url = null, $verb = 'GET', $requestBody = null, $filename = null)
     {
@@ -37,18 +48,7 @@ class Sample
             $this->buildPostBody();
     }
 
-/*
-comment
-second line
-*/
-    public function flush()
-    {
-        $this->requestBody       = null;
-        $this->requestLength     = 0;
-        $this->verb              = 'GET';
-        $this->responseBody      = null;
-        $this->responseInfo      = null;
-    }
+
 
 
     public function execute()
