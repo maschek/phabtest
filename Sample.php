@@ -9,13 +9,15 @@ class Sample
     public $password;
 
     /*
-    * Url of the thingy
-    sdfsdfsdf
-    */
+* url of the site
+*/	
     protected $url;
     protected $verb;
     protected $requestBody;
     protected $requestLength;
+/*
+( type of blah
+*/
     protected $acceptType;
     protected $responseBody;
     protected $responseInfo;
